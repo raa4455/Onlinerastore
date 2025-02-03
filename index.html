@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boost TikTok Views</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --tiktok-pink: #ff0050;
+            --tiktok-dark: #010101;
+        }
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            flex: 1;
+        }
+        .card {
+            border-radius: 15px;
+            border: none;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .btn-primary {
+            background-color: var(--tiktok-pink);
+            border-color: var(--tiktok-pink);
+            padding: 12px 24px;
+            font-weight: 600;
+        }
+        .btn-primary:hover {
+            background-color: #e60045;
+            border-color: #e60045;
+        }
+        .loading-spinner {
+            display: none;
+            width: 2rem;
+            height: 2rem;
+            border-width: 0.25em;
+        }
+        .tooltip-inner {
+            background-color: var(--tiktok-pink) !important;
+        }
+        .validation-error {
+            color: #dc3545;
+            font-size: 0.875em;
+            margin-top: 0.5rem;
+        }
+        footer {
+            background-color: var(--tiktok-dark);
+            color: white;
+            margin-top: auto;
+            padding: 1.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="display-4 mb-3">🚀 Boost TikTok Views Instantly</h1>
+            <p class="lead">Paste your TikTok video link below to increase views</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <form id="tiktokForm" novalidate>
+                            <div class="mb-3">
+                                <label for="videoUrl" class="form-label">TikTok Video URL</label>
+                                <input 
+                                    type="url" 
+                                    class="form-control form-control-lg" 
+                                    id="videoUrl"
+                                    placeholder="https://www.tiktok.com/@username/video/1234567890"
+                                    required
+                                    pattern="^https:\/\/(www\.)?tiktok\.com\/@[A-Za-z0-9_.]+\/video\/\d+.*">
+                                <div class="invalid-feedback validation-error">
+                                    Please enter a valid TikTok video URL
+                                </div>
+                                <small class="form-text text-muted mt-1">
+                                    Example: https://www.tiktok.com/@username/video/1234567890
+                                </small>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">
+                                <span class="submit-text">Boost Views Now</span>
+                                <div class="spinner-border loading-spinner text-light" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">Need help? Join our <a href="https://youtube.com" target="_blank" class="text-white">YouTube Channel</a></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script -->
+    <script>
+        (function() {
+            'use strict';
+            
+            const form = document.getElementById('tiktokForm');
+            const videoUrl = document.getElementById('videoUrl');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                
+                if (!form.checkValidity()) {
+                    form.classList.add('was-validated');
+                    return;
+                }
+
+                // Show loading state
+                submitBtn.disabled = true;
+                submitBtn.querySelector('.submit-text').style.display = 'none';
+                submitBtn.querySelector('.loading-spinner').style.display = 'block';
+
+                try {
+                    // Simulate API call - replace with actual endpoint
+                    await new Promise(resolve => setTimeout(resolve, 1500));
+                    
+                    // Redirect to processing page
+                    window.location.href = `https://your-service.com/process?video=${encodeURIComponent(videoUrl.value)}`;
+                } catch (error) {
+                    console.error('Submission error:', error);
+                    alert('An error occurred. Please try again.');
+                } finally {
+                    // Reset button state
+                    submitBtn.disabled = false;
+                    submitBtn.querySelector('.submit-text').style.display = 'inline';
+                    submitBtn.querySelector('.loading-spinner').style.display = 'none';
+                }
+            });
+
+            // Real-time URL validation
+            videoUrl.addEventListener('input', () => {
+                if (videoUrl.validity.patternMismatch) {
+                    videoUrl.setCustomValidity('Please enter a valid TikTok video URL');
+                } else {
+                    videoUrl.setCustomValidity('');
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
