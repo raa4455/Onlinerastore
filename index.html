@@ -7,366 +7,26 @@
     
     <title>Online Ra Store</title>
     <link href="https://fonts.googleapis.com/css2?family=Khmer&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Timmana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+Khmer:wght@100..900&family=Timmana&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Khmer&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        .product-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.product {
-    width: 48%; /* 2 products per row with a gap */
-    box-sizing: border-box;
-}
-
-.product img {
-    width: 100%;
-    height: auto;
-}
-
-.btn {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
-
-        /* Always 4 columns in the product grid */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Keep 4 columns on all screen sizes */
-    grid-gap: 20px;
-}
-
-/* Ensure large buttons and fonts */
-.btn {
-    font-size: 16px;
-    padding: 15px 30px;
-}
-
-h1, h2, p {
-    font-size: 1.5rem; /* Larger text */
-}
-
-/* Prevent images from shrinking */
-.product img {
-    width: auto;
-    max-width: 100%;
-}
-
-/* Viewport settings for a larger scale */
-
-       
-        /* General Styles */
-        body {
-    
-            font-family: 'Roboto', sans-serif;
-          
-        }
-        p{
-            font-family: "Khmer", serif;
-        }
-
-        /* Container */
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 30px;
-            font-family: "Josefin Sans", serif;
-            
-        }
-       
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-        }
-
-        header nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        header nav li {
-            display: inline-block;
-            margin-right: 20px;
-        }
-
-        header nav a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        /* Hero Section */
-        /* .hero {
-            background-color: #f0f0f0;
-            text-align: center;
-            padding: 50px 0;
-        }
-
-        .hero h2 {
-            font-size: 3rem;
-        }
-
-        .btn {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-        } */ */
-
-
-        /* General Reset */
-body, h1, h2, p, ul, a {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-/* Header Styles */
-header {
-    background-color: #333; /* Dark background for header */
-    color: #fff; /* White text for header */
-    padding: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-header h1 {
-    font-size: 2rem;
-    font-family: 'Cinzel', serif; /* Stylish serif font */
-    color: #f8d210; /* Highlight color */
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-header nav a {
-    text-decoration: none;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s;
-}
-
-header nav a:hover {
-    background-color: #f8d210;
-    color: #333;
-}
-
-/* Hero Section Styles */
-.hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('https://via.placeholder.com/1200x600') center/cover no-repeat; /* Placeholder image */
-    color: #fff;
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.hero .container {
-    width: 900px ;
-    margin: 0 auto;
-}
-
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.hero .btn {
-    display: inline-block;
-    text-decoration: none;
-    color: #333;
-    background-color: #f8d210;
-    padding: 15px 30px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: all 0.3s;
-}
-
-.hero .btn:hover {
-    background-color: #9a9b43;
-    color: #333;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .hero .btn {
-        padding: 10px 20px;
-    }
-}
-
-        /* Products Section */
-        .products {
-            padding: 50px 0;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            grid-gap: 20px;
-        }
-
-        .product {
-            border: 1px solid #ccc;
-            padding: 20px;
-            
-        }
-
-        .product img {
-            max-width: 100%;
-        }
-
-        /* About Section */
-        #about {
-            padding: 50px 0;
-            margin-top: -180px;
-            position: absolute;
-        }
-
-        /* Contact Section */
-        #contact {
-            padding: 50px 0;
-        }
-
-        #contact form {
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
-        #contact label {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        #contact input,
-        #contact textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-        }
-        .icon-row {
-            display: flex;
-            gap: 30px;
-            margin-left: 45%;
-            margin-bottom: 60px;
-            position: absolute;
-        }
-
-        .icon-container {
-            width: 50px;
-            height: 50px;
-            
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-
-        .icon-container:hover {
-            transform: scale(1.1);
-           
-        }
-
-        .icon {
-            width: 100%;
-            height: 50%;
-            fill: #ffffff;
-        }
-        h1{
-            font-family: "Cinzel", serif;
-        }
-        
-        
-        .fa-bars{
-            color: #f8d210;
-            font-size: 50px;
-            
-        }
-        .container h1{
-            font-size: 40px;
-        }
-        
-        
-    </style>
+    <link rel="stylesheet" href="3.css">
 </head>
 <body>
+   
     <header>
         <div class="container">
-            
-            <h1> Online Ra Store</h1>
-            <nav>
-                <ul>
+            <!-- <h1>Online Ra Store</h1> -->
+           
+                
+                    <div class="swiper-slide2"><img src="gif3.mp4" alt="Image 1"></div>
                   
-                    <li><a href="#contact"><i class="fa-regular fa-bars"></i></a></li>
-                </ul>
-            </nav>
+                </div>
+            </div>
+           
         </div>
     </header>
 
@@ -378,11 +38,117 @@ header nav a:hover {
         </div>
     </section>
 
+    <!-- Image Slider Section -->
+<section class="slider">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="gif4.mp4" alt="Image 1"></div>
+          
+        </div>
+    </div>
+</section>
     <section id="shop" class="products">
         <div class="container">
             <h2>Our Products</h2>
+             <!-- First Row -->
+             <div class="product-grid">
+                     
+
+
+
+                <div class="product">
+                    <img src="t1.jpg" alt="Product 1">
+                    <h2 class="product-name">Quik</h2>
+                    <p class="product-need">BLUE BERRY</p>
+                    <p class="product-price"><del>$7.99</del> <strong style="color: red;">Promotion to $5.00</strong></p>
+                    <a href="https://irra_11.t.me/">
+                        <button class="btn">Buy </button>
+                    </a>
+                </div>
     
-            <div class="product-row">
+                <div class="product">
+                    <img src="t2.jpg" alt="Product 2">
+                    <h2 class="product-name">Quik</h2>
+                    <p class="product-need">WATER MELON</p>
+                    <p class="product-price"><del>$7.99</del> <strong style="color: red;">Promotion to $5.00</strong></p>
+                    <a href="https://irra_11.t.me/">
+                        <button class="btn">Buy </button>
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Second Row -->
+            <div class="product-grid">
+                <div class="product">
+                    <img src="t3.jpg" alt="Product 3">
+                    <h2 class="product-name">Quik</h2>
+                    <p class="product-need">SPEARMINT</p>
+                    <p class="product-price"><del>$7.99</del> <strong style="color: red;">Promotion to $5.00</strong></p>
+                    <a href="https://irra_11.t.me/">
+                        <button class="btn">Buy </button>
+                    </a>
+                </div>
+    
+                <div class="product">
+                    <img src="t4.jpg" alt="Product 4">
+                    <h2 class="product-name">Quik</h2>
+                    <p class="product-need">GRAPE</p>
+                    <p class="product-price"><del>$7.99</del> <strong style="color: red;">Promotion to $5.00</strong></p>
+                    <a href="https://irra_11.t.me/">
+                        <button class="btn">Buy </button>
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Third Row -->
+            <div class="product-grid">
+                <div class="product">
+                    <img src="t5.jpg" alt="Product 5">
+                    <h2 class="product-name">Quik</h2>
+                    <p class="product-need">HONEYDEW</p>
+                    <p class="product-price"><del>$7.99</del> <strong style="color: red;">Promotion to $5.00</strong></p>
+                    <a href="https://irra_11.t.me/">
+                        <button class="btn">Buy </button>
+                    </a>
+                </div>
+    
+                <div class="product">
+                    <img src="t6.jpg" alt="Product 6">
+                    <h2 class="product-name">Quik</h2>
+                    <p class="product-need">BANANA</p>
+                    <p class="product-price"><del>$7.99</del> <strong style="color: red;">Promotion to $5.00</strong></p>
+                    <a href="https://irra_11.t.me/">
+                        <button class="btn">Buy </button>
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Fourth Row -->
+            <div class="product-grid">
+                <div class="product">
+                    <img src="t7.jpg" alt="Product 7">
+                    <h2 class="product-name">Quik</h2>
+                    <p class="product-need">COCA LEMON</p>
+                    <p class="product-price"><del>$7.99</del> <strong style="color: red;">Promotion to $5.00</strong></p>
+                    <a href="https://irra_11.t.me/">
+                        <button class="btn">Buy </button>
+                    </a>
+                </div>
+    
+                <div class="product">
+                    <img src="t8.jpg" alt="Product 8">
+                    <h2 class="product-name">Quik</h2>
+                    <p class="product-need">STRAWBERRY ICE CREAM</p>
+                    <p class="product-price"><del>$7.99</del> <strong style="color: red;">Promotion to $5.00</strong></p>
+                    <a href="https://irra_11.t.me/">
+                        <button class="btn">Buy</button>
+                    </a>
+                </div>
+            </div>
+    
+            <div class="product-grid">
+
+                
                      
 
 
@@ -408,7 +174,7 @@ header nav a:hover {
                 </div>
             </div>
     
-            <div class="product-row">
+            <div class="product-grid">
                      
 
 
@@ -434,7 +200,7 @@ header nav a:hover {
                 </div>
             </div>
             
-            <div class="product-row">
+            <div class="product-grid">
                      
 
 
@@ -460,7 +226,7 @@ header nav a:hover {
                 </div>
             </div>
 
-            <div class="product-row">
+            <div class="product-grid">
                      
 
 
@@ -486,7 +252,7 @@ header nav a:hover {
                 </div>
             </div>
 
-            <div class="product-row">
+            <div class="product-grid">
                      
 
 
@@ -511,101 +277,7 @@ header nav a:hover {
                     </a>
                 </div>
             </div>
-            <!-- First Row -->
-            <div class="product-row">
-                     
-
-
-
-                <div class="product">
-                    <img src="1.jpg " alt="Product 1">
-                    <h2 class="product-name">Quik</h2>
-                    <p class="product-need">Strawberry</p>
-                    <p class="product-price">$7.99</p>
-                    <a href="https://irra_11.t.me/">
-                        <button class="btn">Buy </button>
-                    </a>
-                </div>
-    
-                <div class="product">
-                    <img src="2.jpg" alt="Product 2">
-                    <h2 class="product-name">Quik</h2>
-                    <p class="product-need">Custard Pudding</p>
-                    <p class="product-price"><del>$7.99</del> <strong style="color: red;">Promotion to $5.00</strong></p>
-                    <a href="https://irra_11.t.me/">
-                        <button class="btn">Buy </button>
-                    </a>
-                </div>
-            </div>
-    
-            <!-- Second Row -->
-            <div class="product-row">
-                <div class="product">
-                    <img src="3.jpg" alt="Product 3">
-                    <h2 class="product-name">Quik</h2>
-                    <p class="product-need">Honeydew</p>
-                    <p class="product-price"><del>$7.99</del> <strong style="color: red;">Promotion to $5.00</strong></p>
-                    <a href="https://irra_11.t.me/">
-                        <button class="btn">Buy </button>
-                    </a>
-                </div>
-    
-                <div class="product">
-                    <img src="4.jpg" alt="Product 4">
-                    <h2 class="product-name">Quik</h2>
-                    <p class="product-need">Lychee</p>
-                    <p class="product-price"><del>$7.99</del> <strong style="color: red;">Promotion to $5.00</strong></p>
-                    <a href="https://irra_11.t.me/">
-                        <button class="btn">Buy </button>
-                    </a>
-                </div>
-            </div>
-    
-            <!-- Third Row -->
-            <div class="product-row">
-                <div class="product">
-                    <img src="5.jpg" alt="Product 5">
-                    <h2 class="product-name">Quik</h2>
-                    <p class="product-need">Cola Lemon</p>
-                    <p class="product-price"><del>$7.99</del> <strong style="color: red;">Promotion to $5.00</strong></p>
-                    <a href="https://irra_11.t.me/">
-                        <button class="btn">Buy </button>
-                    </a>
-                </div>
-    
-                <div class="product">
-                    <img src="6.jpg" alt="Product 6">
-                    <h2 class="product-name">Quik</h2>
-                    <p class="product-need">Strawberry Jam</p>
-                    <p class="product-price"><del>$7.99</del> <strong style="color: red;">Promotion to $5.00</strong></p>
-                    <a href="https://irra_11.t.me/">
-                        <button class="btn">Buy </button>
-                    </a>
-                </div>
-            </div>
-    
-            <!-- Fourth Row -->
-            <div class="product-row">
-                <div class="product">
-                    <img src="7.jpg" alt="Product 7">
-                    <h2 class="product-name">Quik</h2>
-                    <p class="product-need">Blueberry Jam</p>
-                    <p class="product-price"><del>$7.99</del> <strong style="color: red;">Promotion to $5.00</strong></p>
-                    <a href="https://irra_11.t.me/">
-                        <button class="btn">Buy </button>
-                    </a>
-                </div>
-    
-                <div class="product">
-                    <img src="9.jpg" alt="Product 8">
-                    <h2 class="product-name">Quik</h2>
-                    <p class="product-need">Bannana</p>
-                    <p class="product-price"><del>$7.99</del> <strong style="color: red;">Promotion to $5.00</strong></p>
-                    <a href="https://irra_11.t.me/">
-                        <button class="btn">Buy</button>
-                    </a>
-                </div>
-            </div>
+           
     
     
         
@@ -681,6 +353,26 @@ header nav a:hover {
         
          
         });
+      
+
+
+        var swiper = new Swiper('.swiper-container', {
+        loop: true,  // Infinite loop mode
+        autoplay: {
+            delay: 1000, // 3 seconds delay
+            disableOnInteraction: false, // Keeps autoplay working after user interaction
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+    
+       
         </script>
         
         
